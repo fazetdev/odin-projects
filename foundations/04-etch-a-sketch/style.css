@@ -1,0 +1,51 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+}
+
+.square {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+}
+button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+#container {
+  display: grid;
+  width: 960px;
+  height: 960px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  gap: 1px;
+}
+
+.square {
+  background-color: lightblue;
+  border: 1px solid #ddd;
+  aspect-ratio: 1 / 1; /* makes square perfectly square */
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px; /* Fixed width for predictable wrapping */
+  height: 640px; /* Optional: keep square container */
+  border: 2px solid black;
+}
+
+.square {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: white;
+}
