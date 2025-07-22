@@ -1,25 +1,40 @@
-function add(a, b) {
-   let number = a+b
-   console.log(number)
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = "+";
+
+function addition(a, b) {
+  return a + b;
 }
 
-add(123, 123)
-
-function subtract(a, b){
-   let number = a-b
-   console.log(number)
+function subtract(a, b) {
+  return a - b;
 }
-subtract(123, 123)
 
 function multiply(a, b) {
-   let number = a*b
-   console.log(number)
+  return a * b;
 }
-multiply(123, 123)
 
 function divide(a, b) {
-   let number = a/b
-   console.log(number)
+  return a / b;
 }
-divide(123, 123)
 
+// 👇 Cleaned: No calculation inside this function
+function operate(operator, a, b) {
+  if (operator === "+") {
+    return addition(a, b);
+  } else if (operator === "-") {
+    return subtract(a, b);
+  } else if (operator === "*") {
+    return multiply(a, b);
+  } else {
+    return divide(a, b);
+  }
+}
+
+// 👇 All display logic goes here
+function populateTheDisplay(first, second, op) {
+  let firstNumber = Number(first);
+  let secondNumber = Number(second);
+  let result = operate(op, firstNumber, secondNumber);
+  console.log(result);
+}
