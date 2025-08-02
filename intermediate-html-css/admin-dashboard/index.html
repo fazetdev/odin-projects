@@ -2,143 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="dashboard-container">
-    
-    <!-- Sidebar -->
-    <nav class="sidebar">
-      <h2>Dashboard</h2>
-      <ul>
-        <li>🏠 Home</li>
-        <li>👤 Profile</li>
-        <li>💬 Messages</li>
-        <li>🕓 History</li>
-        <li>📋 Tasks</li>
-        <li>👥 Communities</li>
-        <li>⚙️ Settings</li>
-        <li>❓ Support</li>
-        <li>🛡 Privacy</li>
+
+    <!-- === SIDEBAR === -->
+    <aside class="sidebar">
+      <h1 class="logo"><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+      <ul class="nav-section">
+        <li><i class="fas fa-home"></i> Home</li>
+        <li><i class="fas fa-user"></i> Profile</li>
+        <li><i class="fas fa-message"></i> Messages</li>
+        <li><i class="fas fa-clock"></i> History</li>
+        <li><i class="fas fa-tasks"></i> Tasks</li>
+        <li><i class="fas fa-users"></i> Communities</li>
       </ul>
-    </nav>
+      <ul class="nav-section">
+        <li><i class="fas fa-cog"></i> Settings</li>
+        <li><i class="fas fa-question-circle"></i> Support</li>
+        <li><i class="fas fa-shield-alt"></i> Privacy</li>
+      </ul>
+    </aside>
 
-    <!-- Main content and topbar -->
-    <div class="content-area">
-      
-      <!-- Topbar -->
-      <header class="topbar">
-        <div class="user-greeting">
-          <p>Hi there,</p>
-          <p><strong>Morgan Oakley</strong> (@morgan)</p>
-        </div>
-        <div class="top-actions">
-          <span>🔍</span>
-          <span>🔔</span>
-          <span>👤 Morgan Oakley</span>
-          <ul class="quick-buttons">
-            <li>New</li>
-            <li>Upload</li>
-            <li>Share</li>
-          </ul>
-        </div>
-      </header>
+    <!-- === MAIN === -->
+    <main class="main">
 
-      <!-- Main project cards -->
-      <main class="main-content">
-        <section class="projects">
-          <div class="project-card">
-            <h3>Super Cool Project</h3>
-            <p>This project leverages the latest in web technologies to build a fully responsive and modern dashboard. It includes chart visualizations, user interaction data, and scalable component architecture.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
-            </div>
+      <!-- === TOP BAR === -->
+      <div class="top-bar">
+        <input class="search-bar" type="text" placeholder="Search..." />
+        <div class="top-right">
+          <i class="fas fa-bell notification-icon"></i>
+          <img class="avatar" src="https://i.pravatar.cc/40" alt="User Avatar" />
+          <span>Faruk</span>
+        </div>
+      </div>
+
+      <!-- === USER HEADER === -->
+      <div class="user-header">
+        <div class="greeting">
+          <img class="avatar-large" src="https://i.pravatar.cc/60" alt="User" />
+          <div>
+            <p>Hi there,</p>
+            <h2>Faruk (@farukdev)</h2>
           </div>
-          <div class="project-card">
-            <h3>Less Cool Project</h3>
-            <p>Designed as a lightweight version of the main dashboard, this app focuses on speed and simplicity. It avoids unnecessary complexity while delivering the core features users rely on daily.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
+        </div>
+        <div class="header-buttons">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
+
+      <!-- === CONTENT WRAPPER: MAIN + RIGHT SIDEBAR === -->
+      <div class="content-wrapper">
+        <!-- === PROJECTS === -->
+        <section class="main-content">
+          <h3>Your Projects</h3>
+          <div class="project-grid">
+            <div class="card">
+              <h4>Project One</h4>
+              <p>Short description of project one.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>Impossible App</h3>
-            <p>A bold and ambitious attempt at solving multiple enterprise-level challenges in a single unified platform. While still in beta, its potential impact on the workflow industry is enormous.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
+            <div class="card">
+              <h4>Project Two</h4>
+              <p>Short description of project two.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>Easy App</h3>
-            <p>This app serves as an entry point for new team members learning the codebase. It contains stripped-down logic and reusable UI components to help them quickly build confidence and understanding.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
+            <div class="card">
+              <h4>Project Three</h4>
+              <p>Short description of project three.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>Ad Blocker</h3>
-            <p>Focused on privacy and user experience, this browser extension filters intrusive ads and trackers, enhancing page load times and minimizing data collection across popular websites.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
+            <div class="card">
+              <h4>Project Four</h4>
+              <p>Short description of project four.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>Money Maker</h3>
-            <p>Inspired by fintech innovations, this project analyzes spending behavior and suggests smarter financial decisions. Includes visual reports, goal tracking, and simulated investment options.</p>
-            <div class="icons">
-              <span>⭐</span>
-              <span>👁</span>
-              <span>🔗</span>
+            <div class="card">
+              <h4>Project Five</h4>
+              <p>Short description of project five.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Project Six</h4>
+              <p>Short description of project six.</p>
+              <div class="card-actions">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-code-branch"></i>
+              </div>
             </div>
           </div>
         </section>
-      </main>
-    </div>
 
-    <!-- Right Sidebar -->
-    <aside class="right-sidebar">
+        <!-- === RIGHT SIDEBAR === -->
+        <aside class="right-sidebar">
+          <div class="announcements">
+            <h3>Announcements</h3>
+            <ul>
+              <li>
+                <h4>Site Maintenance</h4>
+                <p>We will be down on Saturday night.</p>
+              </li>
+              <li>
+                <h4>New Features</h4>
+                <p>Check out the new dashboard widgets!</p>
+              </li>
+              <li>
+                <h4>Community Update</h4>
+                <p>Join the live Q&A this Friday.</p>
+              </li>
+            </ul>
+          </div>
 
-      <!-- Announcements -->
-      <section class="announcements">
-        <h3>Announcements</h3>
-        <div class="announcement">
-          <h4>Site Maintenance</h4>
-          <p>Our servers will be undergoing routine maintenance this Saturday. Expect brief downtimes and intermittent access between 1am and 5am UTC.</p>
-        </div>
-        <div class="announcement">
-          <h4>New Feature</h4>
-          <p>We’ve just launched dark mode and customizable dashboards! Try them out in your profile settings and give us feedback.</p>
-        </div>
-        <div class="announcement">
-          <h4>Community Guidelines</h4>
-          <p>Our community rules have been updated. Please read them to ensure a respectful and collaborative environment for everyone.</p>
-        </div>
-      </section>
+          <div class="trending">
+            <h3>Trending</h3>
+            <ul>
+              <li>
+                <img class="avatar" src="https://i.pravatar.cc/40?img=1" alt="user" />
+                <div>
+                  <p>@devguru</p>
+                  <small>Builds cool projects</small>
+                </div>
+              </li>
+              <li>
+                <img class="avatar" src="https://i.pravatar.cc/40?img=2" alt="user" />
+                <div>
+                  <p>@uiqueen</p>
+                  <small>UX matters</small>
+                </div>
+              </li>
+              <li>
+                <img class="avatar" src="https://i.pravatar.cc/40?img=3" alt="user" />
+                <div>
+                  <p>@bughunter</p>
+                  <small>Squashing bugs</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
 
-      <!-- Trending -->
-      <section class="trending">
-        <h3>Trending</h3>
-        <ul>
-          <li>@tegan – World Peace Builder</li>
-          <li>@morgan – Super Cool Project</li>
-          <li>@kendall – Life Changing App</li>
-          <li>@alex – No Traffic Maker</li>
-        </ul>
-      </section>
-
-    </aside>
+    </main>
   </div>
 </body>
 </html>
