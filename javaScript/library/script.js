@@ -1,5 +1,7 @@
+// === Book Array ===
 let myLibrary = [];
 
+// === Book Constructor ===
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -7,32 +9,15 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+// === Add Book to Library Function ===
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
-const form = document.getElementById('book-form');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); // stop the page from reloading on submit
-
-  const title = document.getElementById('title').value.trim();
-  const author = document.getElementById('author').value.trim();
-  const pages = parseInt(document.getElementById('pages').value);
-  const read = document.getElementById('read').checked;
-
-  const newBook = new Book(title, author, pages, read);
-  addBookToLibrary(newBook);
-
-
-
-  form.reset(); // Clear the form after submit
-});
-
-const book1 = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
-addBookToLibrary(book1);
+// === Display Books Function ===
 function displayBooks() {
   const libraryContainer = document.querySelector('.library');
-  libraryContainer.innerHTML = '';
+  libraryContainer.innerHTML = ''; // Clear previous entries
 
   myLibrary.forEach((book, index) => {
     const bookCard = document.createElement('div');
@@ -45,7 +30,7 @@ function displayBooks() {
       <p><strong>Read:</strong> ${book.read ? "Yes" : "No"}</p>
     `;
 
-    // === Toggle Read Button ===
+    // Toggle Read Button
     const toggleBtn = document.createElement('button');
     toggleBtn.textContent = "Toggle Read";
     toggleBtn.addEventListener('click', () => {
@@ -53,26 +38,38 @@ function displayBooks() {
       displayBooks();
     });
 
-    // === Remove Button ===
+    // Remove Book Button
     const removeBtn = document.createElement('button');
     removeBtn.textContent = "Remove Book";
     removeBtn.addEventListener('click', () => {
-      myLibrary.splice(index, 1); // Remove this book from the array
-      displayBooks(); // Refresh the display
+      myLibrary.splice(index, 1);
+      displayBooks();
     });
 
-    // Append buttons to the book card
     bookCard.appendChild(toggleBtn);
     bookCard.appendChild(removeBtn);
-
-    // Append the book card to the container
     libraryContainer.appendChild(bookCard);
   });
 }
-addBookToLibrary(newBook);
 
+// === Form Submission Handling ===
+const form = document.getElementById('book-form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent page reload
 
+  const title = document.getElementById('title').value.trim();
+  const author = document.getElementById('author').value.trim();
+  const pages = parseInt(document.getElementById('pages').value);
+  const read = document.getElementById('read').checked;
+
+  const newBook = new Book(title, author, pages, read);
+  addBookToLibrary(newBook);
+  displayBooks(); // Refresh library view
+
+  form.reset(); // Clear form
+});
+
+// === Add Starter Book ===
 const book1 = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
 addBookToLibrary(book1);
-
-displayBooks(); // ✅ This is correct — keep it!
+displayBooks();
