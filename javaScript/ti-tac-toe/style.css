@@ -1,0 +1,58 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #5F5F68;
+}
+
+/* Game board styling */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Each square */
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D1D1D1;
+  border: 2px solid #333;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.square:hover {
+  background-color: #eaeaea;
+}
+
+/* Result text */
+#game-result {
+  font-size: 1.5em;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Reset button */
+#reset-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+  background-color: #555;
+}
