@@ -10,9 +10,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'My Restaurant',
+      template: './src/template.html',
     }),
   ],
+  
   module: {
     rules: [
       {
