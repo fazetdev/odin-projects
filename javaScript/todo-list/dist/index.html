@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo List</title>
+  <!-- Remove this link since we're importing CSS via Webpack -->
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
 <script defer src="main.js"></script></head>
 <body>
-
-  <div class="todo-container">
+  <header>
     <h1>Todo List</h1>
+  </header>
 
-    <!-- Add Project Form -->
-    <form id="project-form" class="todo-form">
-      <input type="text" id="project-name" placeholder="New Project Name" required />
-      <button type="submit">Add Project</button>
-    </form>
+  <main>
+    <!-- Sidebar for Projects -->
+    <aside id="projects-container">
+      <h2>Projects</h2>
+      <form id="project-form">
+        <input type="text" id="project-name" placeholder="New project name" required />
+        <button type="submit">Add Project</button>
+      </form>
+      <ul id="project-list"></ul> <!-- Added project list container -->
+    </aside>
 
-    <!-- Add Todo Form -->
-    <form id="todo-form" class="todo-form">
-      <input type="text" id="todo-title" placeholder="Todo Title" required />
-      <input type="text" id="todo-description" placeholder="Description" />
-      <input type="date" id="todo-dueDate" required />
-      <select id="todo-priority">
-        <option value="low">Low</option>
-        <option value="medium" selected>Medium</option>
-        <option value="high">High</option>
-      </select>
-      <select id="todo-project"></select>
-      <button type="submit">Add Todo</button>
-    </form>
+    <!-- Main Content -->
+    <section id="todo-section">
+      <h2 id="current-project-name">Default Project</h2>
 
-    <!-- Current Project Name -->
-    <h2 id="current-project-name"></h2>
+      <!-- Screen for latest todo -->
+      <div id="latest-todo-screen">
+        <h3>Latest Todo</h3>
+        <div id="latest-todo">No todos yet</div> <!-- Added default text -->
+      </div>
 
-    <!-- Projects Sidebar -->
-    <div id="project-list" class="project-list"></div>
+      <!-- Todo form -->
+      <form id="todo-form">
+        <div class="form-group">
+          <input type="text" id="todo-title" placeholder="Todo title" required />
+        </div>
+        <div class="form-group">
+          <textarea id="todo-description" placeholder="Description"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="todo-dueDate">Due Date</label>
+            <input type="date" id="todo-dueDate" />
+          </div>
+          <div class="form-group">
+            <label for="todo-priority">Priority</label>
+            <select id="todo-priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="todo-project">Project</label>
+            <select id="todo-project"></select>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Add Todo</button>
+      </form>
 
-    <!-- Todos Container -->
-    <div id="projects-container" class="todo-list"></div>
-  </div>
+      <!-- All todos list -->
+      <div id="all-todos">
+        <h3>All Todos</h3>
+        <ul id="todo-list" class="todo-list">
+          <!-- Todos will be inserted here by JavaScript -->
+        </ul>
+      </div>
+    </section>
+  </main>
 
+  <!-- Change from main.js to dist/main.js if using Webpack -->
+  <script src="dist/main.js"></script>
 </body>
 </html>
