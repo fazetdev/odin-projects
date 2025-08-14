@@ -1,4 +1,4 @@
-import beefImg from '../../images/beeftsire.jpeg';
+import beefImg from '../images/beeftsire.jpeg';
 
 export default function createMenuPage() {
   const menuDiv = document.createElement('div');
@@ -26,10 +26,10 @@ export default function createMenuPage() {
   const image = document.createElement('img');
   image.src = beefImg;
   image.alt = 'Beef Tsire';
-  image.classList.add('menu-image');  // For styling via CSS
+  image.classList.add('menu-image');
 
   const title = document.createElement('h3');
-  title.textContent = 'Beef Tsiire';
+  title.textContent = 'Beef Tsire';
 
   itemDiv.appendChild(image);
   itemDiv.appendChild(title);
