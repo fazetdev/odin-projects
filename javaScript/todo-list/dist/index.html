@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+<script defer src="main.js"></script></head>
+<body>
+
+  <div class="todo-container">
+    <h1>Todo List</h1>
+
+    <!-- Add Project Form -->
+    <form id="project-form" class="todo-form">
+      <input type="text" id="project-name" placeholder="New Project Name" required />
+      <button type="submit">Add Project</button>
+    </form>
+
+    <!-- Add Todo Form -->
+    <form id="todo-form" class="todo-form">
+      <input type="text" id="todo-title" placeholder="Todo Title" required />
+      <input type="text" id="todo-description" placeholder="Description" />
+      <input type="date" id="todo-dueDate" required />
+      <select id="todo-priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select id="todo-project"></select>
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <!-- Current Project Name -->
+    <h2 id="current-project-name"></h2>
+
+    <!-- Projects Sidebar -->
+    <div id="project-list" class="project-list"></div>
+
+    <!-- Todos Container -->
+    <div id="projects-container" class="todo-list"></div>
+  </div>
+
+</body>
+</html>
