@@ -1,95 +1,115 @@
-import './styles.css'; // import CSS
-import { createTodo } from './todo.js';
-import { createProject } from './project.js';
-import { renderProjects } from './dom.js';
+// index.js
+import './styles.css';
+import { createProject, createTodo } from './modules/project.js';
+import { renderProjects, renderTodos, updateProjectOptions, updateLatestTodo } from './modules/dom.js';
+import { loadData, saveData } from './modules/storage.js';
 
-// ----------------------
-// Projects array
-// ----------------------
-const projects = [];
-const defaultProject = createProject("Default Project");
-projects.push(defaultProject);
+// Initialize application state
+let projects = loadData();
+let currentProjectName = projects.length > 0 ? projects[0].name : null;
 
-// Example todo
-const todo1 = createTodo({
-  title: "Buy groceries",
-  description: "Milk, eggs, bread",
-  dueDate: "2025-08-20",
-  priority: "high"
-});
-projects[0].todos.push(todo1);
-
-// ----------------------
-// DOM elements
-// ----------------------
-const projectForm = document.querySelector('#project-form');
-const projectNameInput = document.querySelector('#project-name');
-
-const todoForm = document.querySelector('#todo-form');
-const todoTitle = document.querySelector('#todo-title');
-const todoDescription = document.querySelector('#todo-description');
-const todoDueDate = document.querySelector('#todo-dueDate');
-const todoPriority = document.querySelector('#todo-priority');
-const todoProjectSelect = document.querySelector('#todo-project');
-
-const currentProjectName = document.querySelector('#current-project-name');
-const projectsContainer = document.querySelector('#projects-container');
-
-// ----------------------
-// Functions
-// ----------------------
-function updateProjectOptions() {
-  todoProjectSelect.innerHTML = '';
-  projects.forEach((project, index) => {
-    const option = document.createElement('option');
-    option.value = index;
-    option.textContent = project.name;
-    todoProjectSelect.appendChild(option);
-  });
+// Create default project if none exists
+if (projects.length === 0) {
+  const defaultProject = createProject('Default Project');
+  const sampleTodo = createTodo(
+    'Example Todo',
+    'This is a sample todo item',
+    '2025-08-20',
+    'medium',
+    'Default Project'
+  );
+  defaultProject.todos.push(sampleTodo);
+  projects.push(defaultProject);
+  saveData(projects);
+  currentProjectName = 'Default Project';
 }
 
-function refreshUI() {
-  renderProjects(projects);      // render sidebar + todos
-  updateProjectOptions();        // update dropdown for new todos
+// Get current project
+function getCurrentProject() {
+  return projects.find(project => project.name === currentProjectName);
 }
 
-// ----------------------
 // Initial render
-// ----------------------
-refreshUI();
+function initializeUI() {
+  renderProjects(projects);
+  updateProjectOptions(projects);
+  
+  const currentProject = getCurrentProject();
+  if (currentProject) {
+    renderTodos(currentProject.todos, currentProject.name);
+    updateLatestTodo(currentProject.todos);
+  }
+}
 
-// ----------------------
-// Handle adding new projects
-// ----------------------
-projectForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = projectNameInput.value.trim();
-  if (!name) return;
+initializeUI();
 
-  const newProject = createProject(name);
-  projects.push(newProject);
-
-  projectForm.reset();
-  refreshUI();
-});
-
-// ----------------------
-// Handle adding new todos
-// ----------------------
-todoForm.addEventListener('submit', (e) => {
+// Handle todo form submission
+document.getElementById('todo-form')?.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  const title = todoTitle.value.trim();
-  const description = todoDescription.value.trim();
-  const dueDate = todoDueDate.value;
-  const priority = todoPriority.value;
-  const projectIndex = parseInt(todoProjectSelect.value);
+  const titleInput = document.getElementById('todo-title');
+  const descriptionInput = document.getElementById('todo-description');
+  const dueDateInput = document.getElementById('todo-dueDate');
+  const prioritySelect = document.getElementById('todo-priority');
+  const projectSelect = document.getElementById('todo-project');
 
-  if (!title || isNaN(projectIndex)) return;
+  if (!titleInput.value.trim()) {
+    alert('Todo title is required!');
+    return;
+  }
 
-  const newTodo = createTodo({ title, description, dueDate, priority });
-  projects[projectIndex].todos.push(newTodo);
+  const selectedProjectName = projectSelect.value || 'Default Project';
+  const selectedProject = projects.find(p => p.name === selectedProjectName);
+  
+  if (!selectedProject) {
+    console.error('Project not found');
+    return;
+  }
 
-  todoForm.reset();
-  refreshUI();
+  const newTodo = createTodo(
+    titleInput.value.trim(),
+    descriptionInput.value.trim(),
+    dueDateInput.value,
+    prioritySelect.value,
+    selectedProjectName
+  );
+
+  selectedProject.todos.push(newTodo);
+  saveData(projects);
+
+  // Update UI
+  if (selectedProjectName === currentProjectName) {
+    renderTodos(selectedProject.todos, selectedProjectName);
+    updateLatestTodo(selectedProject.todos);
+  }
+
+  // Reset form
+  e.target.reset();
+});
+
+// Handle project form submission
+document.getElementById('project-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const projectNameInput = document.getElementById('project-name');
+  const projectName = projectNameInput.value.trim();
+  
+  if (!projectName) {
+    alert('Project name is required!');
+    return;
+  }
+
+  if (projects.some(p => p.name === projectName)) {
+    alert('Project already exists!');
+    return;
+  }
+
+  const newProject = createProject(projectName);
+  projects.push(newProject);
+  saveData(projects);
+
+  // Update UI
+  renderProjects(projects);
+  updateProjectOptions(projects);
+  projectNameInput.value = '';
 });
