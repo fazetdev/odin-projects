@@ -10,23 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./images/beeftsire.jpeg":
-/*!*******************************!*\
-  !*** ./images/beeftsire.jpeg ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"0862ccfa79ee8cdef250.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./images/beeftsire.jpeg?\n}");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `/* Reset & Base */\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  \n  body {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #faf6f0;\n    color: #333;\n  }\n  \n  /* Header & Navigation */\n  header {\n    background-color: #8b0000; /* Dark red */\n    padding: 1rem 2rem;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n  }\n  \n  nav {\n    display: flex;\n    justify-content: center;\n    gap: 1rem;\n  }\n  \n  nav button {\n    background-color: #555;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    border-radius: 5px;\n    font-size: 1rem;\n    transition: background-color 0.3s ease;\n  }\n  \n  nav button:hover {\n    background-color: #777;\n  }\n  \n  /* Content Area */\n  #content {\n    max-width: 800px;\n    margin: 2rem auto;\n    padding: 2rem;\n    background: #fff8f0;\n    border-radius: 10px;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n  }\n  \n  /* Headings */\n  #content h1, \n  #content h2 {\n    color: #8b0000;\n    margin-bottom: 1rem;\n  }\n  \n  /* Paragraphs */\n  #content p {\n    line-height: 1.6;\n    margin-bottom: 1rem;\n  }\n  \n  /* Menu Items */\n  .menu-item {\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n    margin-bottom: 1rem;\n  }\n  \n  .menu-item img, \n  .menu-image {\n    width: 200px;\n    height: auto;\n    border-radius: 8px;\n    display: block;\n  }\n  \n  .menu-item h3 {\n    margin-bottom: 0.25rem;\n  }\n  `, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `/* Reset & Base */\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  \n  body {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #faf6f0;\n    color: #333;\n  }\n  \n  /* Header & Navigation */\n  header {\n    background-color: #8b0000; /* Dark red */\n    padding: 1rem 2rem;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n  }\n  \n  nav {\n    display: flex;\n    justify-content: center;\n    gap: 1rem;\n  }\n  \n  nav button {\n    background-color: #555;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    border-radius: 5px;\n    font-size: 1rem;\n    transition: background-color 0.3s ease;\n  }\n  \n  nav button:hover {\n    background-color: #777;\n  }\n  \n  /* Content Area */\n  #content {\n    max-width: 800px;\n    margin: 2rem auto;\n    padding: 2rem;\n    background: #fff8f0;\n    border-radius: 10px;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n  }\n  \n  /* Headings */\n  #content h1, \n  #content h2 {\n    color: #8b0000;\n    margin-bottom: 1rem;\n  }\n  \n  /* Paragraphs */\n  #content p {\n    line-height: 1.6;\n    margin-bottom: 1rem;\n  }\n  \n  /* Menu Items */\n  .menu-item {\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n    margin-bottom: 1rem;\n  }\n  \n  .menu-item img, \n  .menu-image {\n    width: 200px;\n    height: auto;\n    border-radius: 8px;\n    display: block;\n  }\n  \n  .menu-item h3 {\n    margin-bottom: 0.25rem;\n  }\n  .home-container {\n    text-align: center;\n  }\n  \n  .home-images {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    gap: 1rem;\n    margin-top: 1.5rem;\n  }\n  \n  .home-image {\n    width: 200px;\n    border-radius: 8px;\n    box-shadow: 0 2px 6px rgba(0,0,0,0.15);\n    object-fit: cover;\n  }\n  `, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
 
 /***/ }),
 
@@ -110,6 +100,56 @@ eval("{\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleEle
 
 /***/ }),
 
+/***/ "./src/images/beeftsire.jpeg":
+/*!***********************************!*\
+  !*** ./src/images/beeftsire.jpeg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"0862ccfa79ee8cdef250.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/beeftsire.jpeg?\n}");
+
+/***/ }),
+
+/***/ "./src/images/danbun-nama.jpeg":
+/*!*************************************!*\
+  !*** ./src/images/danbun-nama.jpeg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"adca74540b662f0f4cfb.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/danbun-nama.jpeg?\n}");
+
+/***/ }),
+
+/***/ "./src/images/tsire1.jpeg":
+/*!********************************!*\
+  !*** ./src/images/tsire1.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"c23d69629aa847b387d7.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/tsire1.jpeg?\n}");
+
+/***/ }),
+
+/***/ "./src/images/tsire2.jpeg":
+/*!********************************!*\
+  !*** ./src/images/tsire2.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"f2dbcd7b7ba6fd0a4446.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/tsire2.jpeg?\n}");
+
+/***/ }),
+
+/***/ "./src/images/waina.jpeg":
+/*!*******************************!*\
+  !*** ./src/images/waina.jpeg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"aad492b007a0a6bd150f.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/waina.jpeg?\n}");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -136,7 +176,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createHomePage)\n/* harmony export */ });\n// src/modules/home.js\nfunction createHomePage() {\n  const homeContainer = document.createElement('div');\n  homeContainer.classList.add('home-container');\n\n  const headline = document.createElement('h1');\n  headline.textContent = 'Welcome to Hausa Kitchen';\n  homeContainer.appendChild(headline);\n\n  const image = document.createElement('img');\n  image.src = 'https://upload.wikimedia.org/wikipedia/commons/6/68/Suya.jpg';\n  image.alt = 'Delicious Hausa suya';\n  image.classList.add('home-image');\n  homeContainer.appendChild(image);\n\n  const description = document.createElement('p');\n  description.textContent = 'Experience the authentic taste of Northern Nigeria. Our dishes are made with fresh ingredients, traditional spices, and a whole lot of love.';\n  homeContainer.appendChild(description);\n\n  return homeContainer;\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/modules/home.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createHomePage)\n/* harmony export */ });\n/* harmony import */ var _images_danbun_nama_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/danbun-nama.jpeg */ \"./src/images/danbun-nama.jpeg\");\n/* harmony import */ var _images_tsire1_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/tsire1.jpeg */ \"./src/images/tsire1.jpeg\");\n/* harmony import */ var _images_tsire2_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/tsire2.jpeg */ \"./src/images/tsire2.jpeg\");\n/* harmony import */ var _images_waina_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/waina.jpeg */ \"./src/images/waina.jpeg\");\n\n\n\n\n\nfunction createHomePage() {\n  const homeContainer = document.createElement('div');\n  homeContainer.classList.add('home-container');\n\n  const headline = document.createElement('h1');\n  headline.textContent = 'Welcome to Hausa Kitchen';\n  homeContainer.appendChild(headline);\n\n  const description = document.createElement('p');\n  description.textContent = 'Experience the authentic taste of Northern Nigeria. Our dishes are made with fresh ingredients, traditional spices, and a whole lot of love.';\n  homeContainer.appendChild(description);\n\n  // Create a container for images\n  const imagesContainer = document.createElement('div');\n  imagesContainer.classList.add('home-images');\n\n  // Array of image objects with src and alt text\n  const images = [\n    { src: _images_danbun_nama_jpeg__WEBPACK_IMPORTED_MODULE_0__, alt: 'Danbun Nama' },\n    { src: _images_tsire1_jpeg__WEBPACK_IMPORTED_MODULE_1__, alt: 'Tsire 1' },\n    { src: _images_tsire2_jpeg__WEBPACK_IMPORTED_MODULE_2__, alt: 'Tsire 2' },\n    { src: _images_waina_jpeg__WEBPACK_IMPORTED_MODULE_3__, alt: 'Waina' },\n  ];\n\n  images.forEach(imageObj => {\n    const img = document.createElement('img');\n    img.src = imageObj.src;\n    img.alt = imageObj.alt;\n    img.classList.add('home-image'); // for styling\n    imagesContainer.appendChild(img);\n  });\n\n  homeContainer.appendChild(imagesContainer);\n\n  return homeContainer;\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/modules/home.js?\n}");
 
 /***/ }),
 
@@ -146,7 +186,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createMenuPage)\n/* harmony export */ });\n/* harmony import */ var _images_beeftsire_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../images/beeftsire.jpeg */ \"./images/beeftsire.jpeg\");\n\n\nfunction createMenuPage() {\n  const menuDiv = document.createElement('div');\n  menuDiv.classList.add('menu');\n\n  // Headline\n  const headline = document.createElement('h1');\n  headline.textContent = 'Our Menu';\n  menuDiv.appendChild(headline);\n\n  // Menu List\n  const menuList = document.createElement('ul');\n  const items = ['Suya', 'Wainar Shinkafa', 'Danbun Nama'];\n  items.forEach(itemText => {\n    const item = document.createElement('li');\n    item.textContent = itemText;\n    menuList.appendChild(item);\n  });\n  menuDiv.appendChild(menuList);\n\n  // Image Item\n  const itemDiv = document.createElement('div');\n  itemDiv.classList.add('menu-item');\n\n  const image = document.createElement('img');\n  image.src = _images_beeftsire_jpeg__WEBPACK_IMPORTED_MODULE_0__;\n  image.alt = 'Beef Tsire';\n  image.classList.add('menu-image');  // For styling via CSS\n\n  const title = document.createElement('h3');\n  title.textContent = 'Beef Tsiire';\n\n  itemDiv.appendChild(image);\n  itemDiv.appendChild(title);\n  menuDiv.appendChild(itemDiv);\n\n  return menuDiv;\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/modules/menu.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createMenuPage)\n/* harmony export */ });\n/* harmony import */ var _images_beeftsire_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/beeftsire.jpeg */ \"./src/images/beeftsire.jpeg\");\n\n\nfunction createMenuPage() {\n  const menuDiv = document.createElement('div');\n  menuDiv.classList.add('menu');\n\n  // Headline\n  const headline = document.createElement('h1');\n  headline.textContent = 'Our Menu';\n  menuDiv.appendChild(headline);\n\n  // Menu List\n  const menuList = document.createElement('ul');\n  const items = ['Suya', 'Wainar Shinkafa', 'Danbun Nama'];\n  items.forEach(itemText => {\n    const item = document.createElement('li');\n    item.textContent = itemText;\n    menuList.appendChild(item);\n  });\n  menuDiv.appendChild(menuList);\n\n  // Image Item\n  const itemDiv = document.createElement('div');\n  itemDiv.classList.add('menu-item');\n\n  const image = document.createElement('img');\n  image.src = _images_beeftsire_jpeg__WEBPACK_IMPORTED_MODULE_0__;\n  image.alt = 'Beef Tsire';\n  image.classList.add('menu-image');\n\n  const title = document.createElement('h3');\n  title.textContent = 'Beef Tsire';\n\n  itemDiv.appendChild(image);\n  itemDiv.appendChild(title);\n  menuDiv.appendChild(itemDiv);\n\n  return menuDiv;\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/modules/menu.js?\n}");
 
 /***/ }),
 
