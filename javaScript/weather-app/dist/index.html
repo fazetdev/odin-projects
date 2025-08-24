@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - ABCD1234XYZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Weather App</h1>
+        
+        <div class="location-input">
+            <input type="text" id="location" placeholder="Enter city or zip code">
+            <button id="search-btn">Search</button>
+            <button id="current-location-btn">Use My Location</button>
+        </div>
+        
+        <div class="weather-display">
+            <div class="current-weather">
+                <h2 id="location-name">--</h2>
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div id="temperature">--°C</div>
+                </div>
+                <div id="weather-description">--</div>
+                <div class="weather-details">
+                    <div>Humidity: <span id="humidity">--%</span></div>
+                    <div>Wind: <span id="wind">-- km/h</span></div>
+                    <div>Pressure: <span id="pressure">-- hPa</span></div>
+                </div>
+            </div>
+            
+            <div class="forecast" id="forecast">
+                <!-- Forecast items will be added by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
