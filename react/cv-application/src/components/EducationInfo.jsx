@@ -1,17 +1,14 @@
 import { useState } from "react";
 
-function GeneralInfo() {
-  // store form values in state
+function EducationInfo() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
+    school: "",
+    study: "",
+    date: "",
   });
 
-  // track whether we’re editing or displaying
   const [isEditing, setIsEditing] = useState(true);
 
-  // handle input changes
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({
@@ -20,46 +17,44 @@ function GeneralInfo() {
     });
   }
 
-  // handle form submit
   function handleSubmit(e) {
     e.preventDefault();
-    setIsEditing(false); // switch to display mode
+    setIsEditing(false);
   }
 
-  // handle edit button
   function handleEdit() {
-    setIsEditing(true); // switch back to edit mode
+    setIsEditing(true);
   }
 
   return (
     <section>
-      <h2>General Information</h2>
+      <h2>Education</h2>
       {isEditing ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Name: </label>
+            <label>School Name: </label>
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="school"
+              value={formData.school}
               onChange={handleChange}
             />
           </div>
           <div>
-            <label>Email: </label>
+            <label>Title of Study: </label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="study"
+              value={formData.study}
               onChange={handleChange}
             />
           </div>
           <div>
-            <label>Phone: </label>
+            <label>Date of Study: </label>
             <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
+              type="text"
+              name="date"
+              value={formData.date}
               onChange={handleChange}
             />
           </div>
@@ -67,9 +62,9 @@ function GeneralInfo() {
         </form>
       ) : (
         <div>
-          <p><strong>Name:</strong> {formData.name}</p>
-          <p><strong>Email:</strong> {formData.email}</p>
-          <p><strong>Phone:</strong> {formData.phone}</p>
+          <p><strong>School:</strong> {formData.school}</p>
+          <p><strong>Study:</strong> {formData.study}</p>
+          <p><strong>Date:</strong> {formData.date}</p>
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}
@@ -77,4 +72,4 @@ function GeneralInfo() {
   );
 }
 
-export default GeneralInfo;
+export default EducationInfo;

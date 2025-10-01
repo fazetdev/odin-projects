@@ -1,15 +1,15 @@
-import React from "react";
+import "./styles/App.css";   // 👈 add this import
 import GeneralInfo from "./components/GeneralInfo";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import EducationInfo from "./components/EducationInfo";
+import ExperienceInfo from "./components/ExperienceInfo";
 
 function App() {
   return (
     <div>
-      <h1>CV Application</h1>
+      <h1>My CV Application</h1>
       <GeneralInfo />
-      <Education />
-      <Experience />
+      <EducationInfo />
+      <ExperienceInfo />
     </div>
   );
 }
