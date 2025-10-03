@@ -1,20 +1,8 @@
-import { useState, useEffect } from "react";
-import Card from "./Card";
-import "./../styles/GameBoard.css";
+import PropTypes from 'prop-types';
+import Card from './Card';
+import './../styles/GameBoard.css';
 
-function GameBoard({ onCardClick }) {
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    const urls = Array.from({ length: 12 }, (_, i) => ({
-      id: i + 1,
-      title: `Nature ${i + 1}`,
-      img: `https://source.unsplash.com/200x200/?nature&sig=${i + 1}`, // ✅ unique nature image
-    }));
-
-    setCards(urls);
-  }, []);
-
+function GameBoard({ cards, onCardClick }) {
   return (
     <div className="game-board">
       {cards.map((card) => (
@@ -22,12 +10,23 @@ function GameBoard({ onCardClick }) {
           key={card.id}
           id={card.id}
           title={card.title}
-          img={card.img}           // ✅ pass image URL
+          img={card.img}
           onCardClick={onCardClick}
         />
       ))}
     </div>
   );
 }
+
+GameBoard.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onCardClick: PropTypes.func.isRequired,
+};
 
 export default GameBoard;
